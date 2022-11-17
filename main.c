@@ -1,16 +1,16 @@
 #include <stdio.h>
 #define FIL 3
 #define COL 6
-#define NULL -999
+#define NIL (-999)
 
 void imprimeMatriz(int m[][COL]);
 void insertaMatrizIniciada(int m[][COL]);
 
 int main() {
     int num[FIL][COL] ={
-            {0,30,2,NULL,NULL,5},
-            {75,NULL,NULL,NULL,0,NULL},
-            {NULL,NULL,-2,9,NULL,11}};
+            {0,30,     2,   NIL, NIL, 5},
+            {75,  NIL, NIL, NIL, 0, NIL},
+            {NIL, NIL, -2, 9,    NIL, 11}};
     imprimeMatriz(num);
     return 0;
 }
@@ -22,7 +22,7 @@ void imprimeMatriz(int m[][COL]){
         printf(" Fila: %d  |",i);
         for (int j = 0; j < COL; ++j) {
             num=m[i][j];
-            if (num!=NULL)
+            if (num != NIL)
                 printf("%4d   |",num);
             else
                 printf("       |",num);
